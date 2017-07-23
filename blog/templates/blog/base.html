@@ -1,5 +1,4 @@
-{% extends 'blog/base.html' %}
-<!-- {% load staticfiles %}
+{% load staticfiles %}
 <html>
 <head>
 <title> Ritesh's Blog!! </title>
@@ -10,31 +9,21 @@
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type ="text/css">
 </head>
 <body>
-  <div class= "page-header">
-       <h1><a href=""> Ritesh's Blog </a></h1>
-  </div>
-<div class= "content container">
-  <div class = "row">
-    <div class = "col-md-8"> -->
-
-{% block content %}
-  {% for post in posts %}
-  <div class = "post">
-    <div class = "date">
-       <p> published: {{post.published_date}}</p>
-     </div>
-       <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}} </a></h2>
-       <p> {{post.text|linebreaksbr}} </p>
-</div>
-  {% endfor %}
-  {% endblock %}
-<!-- </div>
-</div>
-</div> -->
+  <div class="page-header">
+        <h1><a href="/">Ritesh's Blog</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
   <!-- <div>
       <h2><a href="http://www.manutd.com/Splash-Page.aspx"> ManchesterUnited </a></h2>
       <p> This is the most richest club and also has great history in making of the club. </p>
       <p> Published 07-19-2017 7:57pm </p>
   </div> -->
-<!-- </body>
-</html> -->
+</body>
+</html>
